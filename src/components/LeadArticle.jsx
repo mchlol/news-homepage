@@ -1,11 +1,15 @@
 import React from "react";
-import image from '../assets/image-web-3-desktop.jpg'
+import imageDesktop from '../assets/image-web-3-desktop.jpg'
+import imageMobile from '../assets/image-web-3-mobile.jpg'
 
 export default function LeadArticle() {
     return (
         <article className="lead-article">
 
-            <img className="lead-article--img" src={image} alt="a colourful wooden puzzle" />
+            <picture>
+                <source media="(max-width:768px)" srcSet={imageMobile} />
+                <img className="lead-article--img" src={imageDesktop} alt="a colourful wooden puzzle" />
+            </picture>
 
             <div className="lead-article--content">
 
