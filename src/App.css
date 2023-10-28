@@ -132,7 +132,6 @@ button {
   justify-content: center;
   gap: 1em;
   padding: 1em;
-  /* max-width: 550px; */
 }
 
 .new-stories h2 {
@@ -197,9 +196,4 @@ button {
     display: flex;
     flex-direction: column;
   }
-
-  .new-stories {
-    max-width: 100%;
-  }
-
 }
