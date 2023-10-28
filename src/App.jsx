@@ -3,6 +3,7 @@ import './App.css'
 import NavBar from './components/NavBar'
 import LeadArticle from './components/LeadArticle'
 import NewStories from './components/NewStories'
+import Featured from './components/Featured'
 
 function App() {
 
@@ -10,10 +11,13 @@ function App() {
     <>
       <NavBar />
       <main>
-        {/* <section className="hero"> */}
+        <section className="section--hero">
           <LeadArticle />
           <NewStories />
-        {/* </section> */}
+        </section>
+        <section className="section--featured">
+          <Featured />
+        </section>
       </main>
     </>
   )
