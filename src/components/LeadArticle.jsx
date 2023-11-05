@@ -7,7 +7,7 @@ export default function LeadArticle() {
         <article className="lead-article">
 
             <picture>
-                <source media="(max-width:768px)" srcSet={imageMobile} />
+                <source media="(max-width:730px)" srcSet={imageMobile} />
                 <img className="lead-article--img" src={imageDesktop} alt="a colourful wooden puzzle" />
             </picture>
 

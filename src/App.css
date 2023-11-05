@@ -38,7 +38,6 @@ h1 {
 /* ! ## Nav */
 
 nav {
-  border: 2px solid blue;
   position: sticky;
   top: 0;
   left: 0;
@@ -71,7 +70,6 @@ main {
     "hero"
     "featured";
   gap: 1em;
-  border: 2px solid blue;
 }
 
 section.section--hero {
@@ -92,7 +90,6 @@ section.section--featured {
 .lead-article {
   display: flex;
   flex-direction: column;
-  border: 2px solid red;
 }
 
 .lead-article--content {
@@ -124,7 +121,6 @@ button {
 /* ! ## NewStories */
 
 .new-stories {
-  border: 2px solid red;
   background-color: var(--very-dark-blue);
   color: var(--grayish-blue);
   display: flex;
@@ -163,7 +159,6 @@ button {
 }
 
 .featured {
-  border: 2px solid blue;
   color: var(--dark-grayish-blue);
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -171,7 +166,6 @@ button {
 }
 
 .featured--content {
-  border: 2px solid fuchsia;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -185,10 +179,31 @@ button {
 
 /* ! ## Media Queries */
 
+/* at 700px insert burger menu */
+
+@media (max-width: 990px) {
+
+  .section--hero {
+    flex-direction: column;
+    gap: 1em;
+  }
+
+}
+
 @media (max-width: 768px) {
   main {
     display: flex;
     flex-flow: column nowrap;
+    gap: 1em;
+  }
+
+  .featured {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .featured--content {
+    justify-content: start;
     gap: 1em;
   }
 
