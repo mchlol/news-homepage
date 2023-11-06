@@ -32,7 +32,27 @@ body {
 h1 {
   font-size: clamp(1.5rem, 4vw, 2rem);
   line-height: normal;
+}
 
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:hover,
+a:focus {
+  text-decoration: underline;
+  text-decoration-color: var(--soft-orange);
+}
+
+a,
+button {
+  cursor: pointer;
+}
+
+button:hover,
+button:focus {
+  opacity: 0.8;
 }
 
 /* ! ## Nav */
@@ -168,9 +188,10 @@ button {
 .featured--content {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: start;
   align-content: space-around;
   align-items: center;
+  gap: 1em;
 }
 
 .featured--img {
@@ -200,11 +221,6 @@ button {
   .featured {
     display: flex;
     flex-direction: column;
-  }
-
-  .featured--content {
-    justify-content: start;
-    gap: 1em;
   }
 
   .lead-article--content {

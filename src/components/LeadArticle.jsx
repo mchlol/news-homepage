@@ -13,7 +13,9 @@ export default function LeadArticle() {
 
             <div className="lead-article--content">
 
-                <h1 className="lead-article--header">The Bright Future of Web 3.0?</h1>
+                <a href="#">
+                    <h1 className="lead-article--header">The Bright Future of Web 3.0?</h1>
+                </a>
 
                 <div className="lead-article--text">
 
