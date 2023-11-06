@@ -2,16 +2,45 @@ import React from 'react';
 import logo from '../assets/logo.svg'
 
 export default function NavBar() {
+
+    const [navExpanded, setNavExpanded] = React.useState(false);
+
     return (
         <nav>
-            <img src={logo} alt="" />
-            <ul>
-                <li>Home</li>
-                <li>New</li>
-                <li>Popular</li>
-                <li>Trending</li>
-                <li>Categories</li>
-            </ul>
+            <a href="#">
+                <img src={logo} alt="" />
+            </a>
+
+            <button 
+            className="burger"
+            onClick={() => {
+                setNavExpanded(!navExpanded);
+            }}
+            >
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="h-5 w-5"
+                    viewBox="0 0 20 20"
+                    fill="#e9ab53"
+                >
+                    <path
+                        fillRule="evenodd"
+                        d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM9 15a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z"
+                        clipRule="evenodd"
+                    />
+                </svg>
+            </button>
+
+            {/* <div className={navExpanded ? 'nav-menu nav-menu-expanded' : 'nav-menu'}> */}
+            <div className="nav-menu-expanded">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">New</a></li>
+                    <li><a href="#">Popular</a></li>
+                    <li><a href="#">Trending</a></li>
+                    <li><a href="#">Categories</a></li>
+                </ul>
+            </div>
 
         </nav>
     )
