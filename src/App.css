@@ -104,12 +104,16 @@ nav ul {
   border-radius: 50%;
   background-color: var(--off-white);
   display: none;
+  position: absolute;
+  top: 50%;
+  right: 25px;
 }
 
 .burger span:hover {
   color: var(--soft-orange);
   transition: color 0.2s ease-in-out;
 }
+
 
 /* ! ## Main */
 
@@ -284,6 +288,7 @@ section.section--featured {
     position: relative;
     top: 60px;
     background-color: var(--off-white);
+    z-index: 1;
   }
 
   .nav-menu ul {

@@ -19,7 +19,7 @@ export default function NavBar() {
                 setMobileNavOpen(!mobileNavOpen);
             }}
             >
-                <span class="material-symbols-outlined">
+                <span className="material-symbols-outlined">
                     menu
                 </span>
             </button>
