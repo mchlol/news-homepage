@@ -13,8 +13,8 @@ export default function LeadArticle() {
 
             <div className="lead-article--content">
 
-                <a href="#">
-                    <h1 className="lead-article--header">The Bright Future of Web 3.0?</h1>
+                <a href="#" className="lead-article--header">
+                    <h1>The Bright Future of Web 3.0?</h1>
                 </a>
 
                 <div className="lead-article--text">

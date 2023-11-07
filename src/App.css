@@ -13,7 +13,7 @@ img {
 
 /* ! ## Variables  */
 :root {
-  --soft-orange: rgb(233, 171, 83);
+  --soft-orange: hsl(35, 77%, 62%);
   --soft-red: hsl(5, 85%, 63%);
   --off-white: hsl(36, 100%, 99%);
   --grayish-blue: hsl(233, 8%, 79%);
@@ -30,7 +30,6 @@ body {
 }
 
 h1 {
-  font-size: clamp(1.5rem, 4vw, 2rem);
   line-height: normal;
 }
 
@@ -108,7 +107,7 @@ main {
   grid-template-areas:
     "hero"
     "featured";
-  gap: 1em;
+  gap: 2em;
 }
 
 section.section--hero {
@@ -129,21 +128,20 @@ section.section--featured {
 .lead-article {
   display: flex;
   flex-direction: column;
+  position: relative;
 }
 
 .lead-article--content {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 1em;
+  justify-self: end;
 }
 
 .lead-article--header {
   margin: auto auto 0 0;
-  font-size: 2.5rem;
+  font-size: 3rem;
 }
 
 .lead-article--text p {
-  margin: 2em 1em 2em 0;
+  margin: 2em 2em 2em 0;
   color: var(--dark-grayish-blue);
 }
 
@@ -166,7 +164,7 @@ section.section--featured {
   flex-direction: column;
   justify-content: center;
   gap: 1em;
-  padding: 1em;
+  padding: 2em 1em;
 }
 
 .new-stories h2 {
@@ -177,6 +175,10 @@ section.section--featured {
 
 .new-stories h3 {
   color: var(--off-white);
+}
+
+.new-stories article {
+  padding: 1em;
 }
 
 .new-stories hr {
@@ -255,6 +257,10 @@ section.section--featured {
     display: flex;
     flex-direction: column;
   }
+
+  .lead-article--header {
+    font-size: 2.5rem;
+  }
 }
 
 @media (max-width: 700px) {
@@ -283,4 +289,5 @@ section.section--featured {
   .hidden {
     display: block;
   }
+
 }
