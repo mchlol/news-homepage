@@ -13,7 +13,7 @@ img {
 
 /* ! ## Variables  */
 :root {
-  --soft-orange: hsl(35, 77%, 62%);
+  --soft-orange: rgb(233, 171, 83);
   --soft-red: hsl(5, 85%, 63%);
   --off-white: hsl(36, 100%, 99%);
   --grayish-blue: hsl(233, 8%, 79%);
@@ -58,11 +58,13 @@ button:focus {
 /* ! ## Nav */
 
 nav {
-  position: sticky;
-  top: 0;
-  left: 0;
+  position: relative;
   padding: 1em;
   background-color: var(--off-white);
+  height: 60px;
+  width: 100%;
+  display: flex;
+  align-items: center;
 }
 
 nav,
@@ -79,7 +81,24 @@ nav ul {
   font-size: 0.8rem;
   color: var(--dark-grayish-blue);
   margin-right: 1em;
+  position: relative;
 }
+
+.burger {
+  border: 0;
+  height: 40px;
+  width: 40px;
+  padding: 0.5rem;
+  border-radius: 50%;
+  background-color: var(--off-white);
+  transition: background-color 0.2s ease-in-out;
+  position: absolute;
+  top: 50%;
+  right: 25px;
+  transform: translateY(-50%);
+  display: none;
+}
+
 
 /* ! ## Main */
 
@@ -128,7 +147,7 @@ section.section--featured {
   color: var(--dark-grayish-blue);
 }
 
-button {
+.lead-article button {
   border: none;
   background-color: var(--soft-red);
   color: var(--off-white);
@@ -198,6 +217,14 @@ button {
   max-width: 100px;
 }
 
+.hidden {
+  display: none;
+}
+
+.visible {
+  display: block;
+}
+
 /* ! ## Media Queries */
 
 /* at 700px insert burger menu */
@@ -212,6 +239,7 @@ button {
 }
 
 @media (max-width: 768px) {
+
   main {
     display: flex;
     flex-flow: column nowrap;
@@ -226,5 +254,33 @@ button {
   .lead-article--content {
     display: flex;
     flex-direction: column;
+  }
+}
+
+@media (max-width: 700px) {
+  .burger {
+    display: block;
+  }
+
+  .nav-menu {
+    position: relative;
+    top: 60px;
+    background-color: var(--off-white);
+  }
+
+  .nav-menu ul {
+    margin: 1em;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
+  nav a {
+    align-self: flex-start;
+  }
+}
+
+@media (min-width: 701px) {
+  .hidden {
+    display: block;
   }
 }
