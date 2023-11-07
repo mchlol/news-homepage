@@ -80,21 +80,8 @@ nav ul {
   gap: 1em;
   font-size: 0.8rem;
   color: var(--dark-grayish-blue);
-  /* margin-right: 1em; */
+  margin-right: 1em;
   position: relative;
-}
-
-.nav-menu-expanded {
-  display: block;
-  width: 100%;
-  border: 2px solid red;
-}
-
-.nav-menu-expanded ul {
-  border: 2px solid blue;
-  flex-direction: column;
-  background-color: var(--off-white);
-  padding: 1em;
 }
 
 .burger {
@@ -230,6 +217,14 @@ section.section--featured {
   max-width: 100px;
 }
 
+.hidden {
+  display: none;
+}
+
+.visible {
+  display: block;
+}
+
 /* ! ## Media Queries */
 
 /* at 700px insert burger menu */
@@ -268,6 +263,24 @@ section.section--featured {
   }
 
   .nav-menu {
-    display: none;
+    position: relative;
+    top: 60px;
+    background-color: var(--off-white);
+  }
+
+  .nav-menu ul {
+    margin: 1em;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
+  nav a {
+    align-self: flex-start;
+  }
+}
+
+@media (min-width: 701px) {
+  .hidden {
+    display: block;
   }
 }

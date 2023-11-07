@@ -3,7 +3,9 @@ import logo from '../assets/logo.svg'
 
 export default function NavBar() {
 
-    const [navExpanded, setNavExpanded] = React.useState(false);
+    const [mobileNavOpen, setMobileNavOpen] = React.useState(false);
+
+    // if window is wider than 700px mobileNavOpen must be false
 
     return (
         <nav>
@@ -14,7 +16,7 @@ export default function NavBar() {
             <button 
             className="burger"
             onClick={() => {
-                setNavExpanded(!navExpanded);
+                setMobileNavOpen(!mobileNavOpen);
             }}
             >
                 <svg
@@ -31,8 +33,7 @@ export default function NavBar() {
                 </svg>
             </button>
 
-            {/* <div className={navExpanded ? 'nav-menu nav-menu-expanded' : 'nav-menu'}> */}
-            <div className="nav-menu-expanded">
+            <div className={mobileNavOpen ? 'nav-menu visible' : 'nav-menu hidden'}>
                 <ul>
                     <li><a href="#">Home</a></li>
                     <li><a href="#">New</a></li>
